@@ -1,0 +1,29 @@
+# Copyright © 2026 Bicameral, LLC. All rights reserved. See LICENSE.
+# Source for assets/how-a-comparison-runs.svg. Laid out by hand; rebuild with assets/diagrams/build.sh.
+prefix ex
+title "How one comparison runs"
+desc "The task's starting files are rebuilt and the task prompt is given to a new session with Code Mode off; the run is scored and measured. The files are rebuilt again and the same prompt goes to a new session with Code Mode on, which is scored and measured the same way. The two sets of numbers are then compared."
+grid 300 108
+beat 1.0
+hold 2.5
+rest 1.5
+plays 2
+node files 0.5 0 "The task's starting files|rebuilt before every run"
+node off 0 1.15 "Session, Code Mode off|new session, the task prompt"
+node on 1 1.15 "Session, Code Mode on|new session, the same prompt"
+node score 0.5 2.3 "Score and measure|pass or fail, context, requests"
+node result 0.5 3.3 "Compare off with on|same model, same task" shape=round
+edge files off "rebuild"
+edge files on "rebuild"
+edge off score
+edge on score
+edge score result
+phase "Run 1: Code Mode off"
+step files
+step files>off off
+step off>score score
+phase "Run 2: Code Mode on, from the same files"
+step files
+step files>on on
+step on>score score
+step score>result result

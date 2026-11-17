@@ -1,0 +1,16 @@
+#!/bin/sh
+# Refuses every push to a remote other than the private one. The working repository holds the
+# maintainer's private files, so it is never pushed anywhere else. The published copy is made
+# with bin/publish.py commit, never with a push of this repository.
+#
+# Install it once in each clone of the working repository. It is copied, not linked, so that it
+# is still there when an older commit is checked out:
+#   cp .githooks/pre-push "$(git rev-parse --git-path hooks)/pre-push"
+#   git config benchmark.privateRemote "$(git remote get-url origin)"
+top="$(git rev-parse --show-toplevel)"
+if [ ! -f "$top/bin/publish.py" ]; then
+  echo "push refused: bin/publish.py is not in this checkout, so the push cannot be checked." >&2
+  echo "Check out a commit that has it, such as main, and push from there." >&2
+  exit 1
+fi
+exec python3 "$top/bin/publish.py" guard "$1" "$2"

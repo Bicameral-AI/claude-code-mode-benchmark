@@ -1,0 +1,983 @@
+| task | mode | typed | model | result | requests | tools_run | scripts | subagents | seconds | fixed_ctx | task_ctx | peak_ctx | total_in | processed | cost_usd |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| C0 | off | script | claude-fable-5-2 | PASS | 2 | 1 | 0 | 0 | 7 | 44,243 | 2,159 | 46,289 | 90,532 | 90,733 | 0.33 |
+| C0 | off | script | claude-fable-5-2 | PASS | 2 | 1 | 0 | 0 | 7 | 44,237 | 2,160 | 46,283 | 90,520 | 90,722 | 0.28 |
+| C0 | on | script | claude-fable-5-2 | PASS | 2 | 1 | 1 | 0 | 8 | 31,183 | 2,327 | 33,396 | 64,579 | 64,789 | 0.55 |
+| C0 | on | script | claude-fable-5-2 | PASS | 2 | 1 | 1 | 0 | 8 | 31,185 | 2,332 | 33,400 | 64,585 | 64,800 | 0.28 |
+| C0 | off | script | claude-haiku-5-5 | PASS | 2 | 1 | 0 | 0 | 2 | 43,560 | 2,215 | 45,630 | 89,190 | 89,423 | 0.01 |
+| C0 | off | script | claude-haiku-5-5 | PASS | 2 | 1 | 0 | 0 | 2 | 43,559 | 2,165 | 45,629 | 89,188 | 89,371 | 0.0 |
+| C0 | on | script | claude-haiku-5-5 | PASS | 2 | 1 | 2 | 0 | 4 | 30,501 | 2,537 | 32,933 | 63,434 | 63,718 | 0.01 |
+| C0 | on | script | claude-haiku-5-5 | PASS | 2 | 1 | 1 | 0 | 3 | 30,509 | 2,320 | 32,765 | 63,274 | 63,452 | 0.0 |
+| C0 | off | script | claude-opus-5-5 | PASS | 2 | 1 | 0 | 0 | 5 | 42,931 | 1,961 | 44,789 | 87,720 | 87,913 | 0.17 |
+| C0 | off | script | claude-opus-5-5 | PASS | 2 | 1 | 0 | 0 | 3 | 42,931 | 1,961 | 44,789 | 87,720 | 87,913 | 0.16 |
+| C0 | on | script | claude-opus-5-5 | PASS | 2 | 1 | 1 | 0 | 4 | 29,829 | 2,257 | 32,011 | 61,840 | 61,979 | 0.27 |
+| C0 | on | script | claude-opus-5-5 | PASS | 2 | 1 | 1 | 0 | 5 | 29,826 | 2,386 | 32,034 | 61,860 | 62,129 | 0.15 |
+| C0 | off | script | claude-sonnet-5-5 | PASS | 2 | 1 | 0 | 0 | 5 | 42,821 | 2,153 | 44,867 | 87,688 | 87,883 | 0.09 |
+| C0 | off | script | claude-sonnet-5-5 | PASS | 2 | 1 | 0 | 0 | 4 | 42,812 | 2,153 | 44,858 | 87,670 | 87,865 | 0.08 |
+| C0 | on | script | claude-sonnet-5-5 | PASS | 2 | 1 | 1 | 0 | 4 | 29,758 | 2,267 | 31,939 | 61,697 | 61,847 | 0.14 |
+| C0 | on | script | claude-sonnet-5-5 | PASS | 2 | 1 | 1 | 0 | 6 | 29,753 | 2,277 | 31,933 | 61,686 | 61,847 | 0.08 |
+| T1 | off | script | claude-fable-5-2 | PASS | 5 | 4 | 0 | 0 | 55 | 44,531 | 8,800 | 52,856 | 247,218 | 252,054 | 0.6 |
+| T1 | off | script | claude-fable-5-2 | PASS | 5 | 4 | 0 | 0 | 59 | 44,528 | 10,238 | 54,348 | 252,869 | 258,075 | 0.64 |
+| T1 | on | script | claude-fable-5-2 | PASS | 5 | 12 | 4 | 0 | 97 | 31,477 | 33,484 | 64,495 | 240,457 | 250,492 | 1.2 |
+| T1 | on | script | claude-fable-5-2 | PASS | 5 | 8 | 4 | 0 | 57 | 31,469 | 15,159 | 46,056 | 207,845 | 212,825 | 0.7 |
+| T1 | off | script | claude-haiku-5-5 | PASS | 7 | 6 | 0 | 0 | 22 | 43,849 | 5,808 | 49,536 | 329,799 | 333,183 | 0.01 |
+| T1 | off | script | claude-haiku-5-5 | PASS | 6 | 5 | 0 | 0 | 25 | 43,850 | 7,598 | 50,942 | 290,745 | 295,496 | 0.01 |
+| T1 | on | script | claude-haiku-5-5 | PASS | 6 | 705 | 5 | 0 | 54 | 30,797 | 14,194 | 44,201 | 236,597 | 243,495 | 0.01 |
+| T1 | on | script | claude-haiku-5-5 | PASS | 9 | 451 | 8 | 0 | 63 | 30,795 | 44,839 | 74,981 | 478,545 | 487,916 | 0.02 |
+| T1 | off | script | claude-opus-5-5 | PASS | 7 | 6 | 0 | 0 | 44 | 43,221 | 6,531 | 49,223 | 325,111 | 329,412 | 0.33 |
+| T1 | off | script | claude-opus-5-5 | PASS | 7 | 6 | 0 | 0 | 40 | 43,223 | 6,285 | 48,960 | 323,600 | 327,497 | 0.32 |
+| T1 | on | script | claude-opus-5-5 | PASS | 5 | 749 | 4 | 0 | 61 | 30,117 | 19,494 | 49,071 | 217,459 | 221,041 | 0.39 |
+| T1 | on | script | claude-opus-5-5 | PASS | 7 | 1,174 | 6 | 0 | 118 | 30,109 | 9,165 | 38,787 | 247,450 | 251,714 | 0.33 |
+| T1 | off | script | claude-sonnet-5-5 | PASS | 4 | 2 | 0 | 0 | 21 | 43,102 | 3,746 | 46,417 | 178,958 | 181,423 | 0.12 |
+| T1 | off | script | claude-sonnet-5-5 | PASS | 3 | 2 | 0 | 0 | 16 | 43,099 | 4,324 | 46,921 | 135,296 | 137,280 | 0.11 |
+| T1 | on | script | claude-sonnet-5-5 | PASS | 3 | 3 | 2 | 0 | 18 | 30,043 | 4,814 | 34,387 | 96,886 | 98,866 | 0.11 |
+| T1 | on | script | claude-sonnet-5-5 | PASS | 3 | 393 | 2 | 0 | 27 | 30,046 | 2,376 | 32,086 | 92,704 | 94,093 | 0.09 |
+| E1 | off | script | claude-fable-5-2 | PASS | 5 | 4 | 0 | 0 | 35 | 44,311 | 10,329 | 54,226 | 249,096 | 251,409 | 0.52 |
+| E1 | off | script | claude-fable-5-2 | PASS | 5 | 4 | 0 | 0 | 37 | 44,313 | 14,019 | 57,972 | 256,750 | 259,200 | 0.59 |
+| E1 | on | script | claude-fable-5-2 | PASS | 5 | 43 | 4 | 0 | 38 | 31,260 | 17,971 | 48,787 | 201,059 | 203,335 | 0.63 |
+| E1 | on | script | claude-fable-5-2 | PASS | 5 | 20 | 4 | 0 | 41 | 31,261 | 18,011 | 48,883 | 197,446 | 200,052 | 0.64 |
+| E1 | off | script | claude-haiku-5-5 | PASS | 6 | 21 | 0 | 0 | 34 | 43,631 | 15,702 | 58,706 | 303,862 | 311,862 | 0.01 |
+| E1 | off | script | claude-haiku-5-5 | PASS | 5 | 5 | 0 | 0 | 29 | 43,631 | 12,637 | 55,399 | 245,863 | 251,590 | 0.01 |
+| E1 | on | script | claude-haiku-5-5 | PASS | 7 | 14 | 6 | 0 | 39 | 30,583 | 16,969 | 46,805 | 268,097 | 275,230 | 0.01 |
+| E1 | on | script | claude-haiku-5-5 | PASS | 7 | 79 | 6 | 0 | 48 | 30,579 | 17,947 | 48,022 | 282,064 | 292,005 | 0.01 |
+| E1 | off | script | claude-opus-5-5 | PASS | 8 | 7 | 0 | 0 | 36 | 43,005 | 10,536 | 52,926 | 389,695 | 392,893 | 0.35 |
+| E1 | off | script | claude-opus-5-5 | PASS | 6 | 5 | 0 | 0 | 24 | 43,008 | 7,495 | 50,098 | 278,750 | 280,998 | 0.28 |
+| E1 | on | script | claude-opus-5-5 | PASS | 4 | 44 | 3 | 0 | 28 | 29,903 | 10,296 | 39,605 | 137,200 | 139,390 | 0.26 |
+| E1 | on | script | claude-opus-5-5 | PASS | 6 | 47 | 5 | 0 | 35 | 29,897 | 17,186 | 46,503 | 227,205 | 230,038 | 0.36 |
+| E1 | off | script | claude-sonnet-5-5 | PASS | 6 | 5 | 0 | 0 | 20 | 42,885 | 6,254 | 48,548 | 273,100 | 274,894 | 0.13 |
+| E1 | off | script | claude-sonnet-5-5 | PASS | 9 | 8 | 0 | 0 | 33 | 42,886 | 5,786 | 48,244 | 410,279 | 412,611 | 0.15 |
+| E1 | on | script | claude-sonnet-5-5 | PASS | 4 | 39 | 3 | 0 | 27 | 29,834 | 8,507 | 37,850 | 134,416 | 136,638 | 0.13 |
+| E1 | on | script | claude-sonnet-5-5 | PASS | 4 | 38 | 3 | 0 | 27 | 29,834 | 6,621 | 35,797 | 131,001 | 132,864 | 0.12 |
+| M1 | off | script | claude-fable-5-2 | PASS | 8 | 125 | 0 | 0 | 76 | 44,417 | 53,801 | 98,010 | 520,394 | 528,284 | 1.49 |
+| M1 | off | script | claude-fable-5-2 | PASS | 7 | 125 | 0 | 0 | 64 | 44,417 | 53,740 | 97,953 | 473,707 | 481,542 | 1.48 |
+| M1 | on | script | claude-fable-5-2 | PASS | 4 | 127 | 3 | 0 | 19 | 31,359 | 8,466 | 39,676 | 147,809 | 148,779 | 0.42 |
+| M1 | on | script | claude-fable-5-2 | PASS | 4 | 127 | 3 | 0 | 13 | 31,361 | 8,339 | 39,567 | 146,584 | 147,639 | 0.42 |
+| M1 | off | script | claude-haiku-5-5 | PASS | 8 | 125 | 0 | 0 | 35 | 43,735 | 54,489 | 98,045 | 517,069 | 525,500 | 0.02 |
+| M1 | off | script | claude-haiku-5-5 | PASS | 8 | 125 | 0 | 0 | 35 | 43,740 | 54,368 | 97,878 | 516,712 | 525,022 | 0.02 |
+| M1 | on | script | claude-haiku-5-5 | PASS | 5 | 126 | 4 | 0 | 16 | 30,679 | 8,587 | 38,949 | 181,138 | 182,713 | 0.01 |
+| M1 | on | script | claude-haiku-5-5 | PASS | 6 | 128 | 5 | 0 | 13 | 30,680 | 8,795 | 39,234 | 219,594 | 220,900 | 0.01 |
+| M1 | off | script | claude-opus-5-5 | PASS | 12 | 125 | 0 | 0 | 73 | 43,107 | 54,218 | 97,066 | 768,850 | 777,116 | 0.88 |
+| M1 | off | script | claude-opus-5-5 | PASS | 11 | 125 | 0 | 0 | 69 | 43,110 | 53,788 | 96,686 | 722,231 | 730,077 | 0.86 |
+| M1 | on | script | claude-opus-5-5 | PASS | 5 | 128 | 4 | 0 | 15 | 30,005 | 3,967 | 33,741 | 159,047 | 160,056 | 0.2 |
+| M1 | on | script | claude-opus-5-5 | PASS | 6 | 129 | 5 | 0 | 20 | 30,000 | 4,113 | 33,862 | 191,415 | 192,607 | 0.21 |
+| M1 | off | script | claude-sonnet-5-5 | PASS | 8 | 125 | 0 | 0 | 51 | 42,992 | 53,750 | 96,623 | 509,201 | 517,029 | 0.41 |
+| M1 | off | script | claude-sonnet-5-5 | PASS | 10 | 125 | 0 | 0 | 58 | 42,988 | 54,022 | 96,714 | 633,468 | 641,556 | 0.42 |
+| M1 | on | script | claude-sonnet-5-5 | PASS | 6 | 127 | 5 | 0 | 21 | 29,930 | 3,751 | 33,528 | 189,402 | 190,310 | 0.1 |
+| M1 | on | script | claude-sonnet-5-5 | PASS | 6 | 128 | 5 | 0 | 20 | 29,929 | 3,498 | 33,261 | 188,554 | 189,448 | 0.1 |
+| M2 | off | script | claude-fable-5-2 | PASS | 8 | 125 | 0 | 0 | 78 | 44,409 | 53,869 | 97,870 | 520,219 | 528,177 | 1.49 |
+| M2 | off | script | claude-fable-5-2 | PASS | 8 | 125 | 0 | 0 | 64 | 44,410 | 53,856 | 97,860 | 520,135 | 528,111 | 1.49 |
+| M2 | on | script | claude-fable-5-2 | PASS | 5 | 127 | 4 | 0 | 30 | 31,351 | 12,858 | 43,861 | 192,384 | 194,019 | 0.52 |
+| M2 | on | script | claude-fable-5-2 | PASS | 5 | 128 | 4 | 0 | 20 | 31,352 | 13,835 | 44,815 | 204,355 | 206,011 | 0.54 |
+| M2 | off | script | claude-haiku-5-5 | PASS | 9 | 125 | 0 | 0 | 39 | 43,723 | 55,544 | 98,890 | 590,759 | 600,215 | 0.03 |
+| M2 | off | script | claude-haiku-5-5 | FAIL | 8 | 125 | 0 | 0 | 38 | 43,721 | 55,384 | 98,707 | 518,414 | 527,740 | 0.02 |
+| M2 | on | script | claude-haiku-5-5 | FAIL | 9 | 131 | 8 | 0 | 27 | 30,669 | 17,214 | 47,254 | 339,118 | 343,446 | 0.01 |
+| M2 | on | script | claude-haiku-5-5 | PASS | 9 | 131 | 8 | 0 | 29 | 30,669 | 17,963 | 48,026 | 352,574 | 357,393 | 0.01 |
+| M2 | off | script | claude-opus-5-5 | PASS | 11 | 125 | 0 | 0 | 69 | 43,100 | 54,253 | 96,730 | 722,603 | 730,911 | 0.84 |
+| M2 | off | script | claude-opus-5-5 | PASS | 11 | 125 | 0 | 0 | 73 | 43,098 | 54,203 | 96,745 | 722,576 | 730,834 | 0.87 |
+| M2 | on | script | claude-opus-5-5 | PASS | 6 | 130 | 5 | 0 | 22 | 29,989 | 13,525 | 42,883 | 216,623 | 218,350 | 0.3 |
+| M2 | on | script | claude-opus-5-5 | PASS | 6 | 130 | 5 | 0 | 24 | 29,995 | 12,464 | 42,113 | 215,496 | 217,043 | 0.29 |
+| M2 | off | script | claude-sonnet-5-5 | PASS | 8 | 125 | 0 | 0 | 52 | 42,986 | 53,725 | 96,536 | 509,142 | 516,945 | 0.41 |
+| M2 | off | script | claude-sonnet-5-5 | PASS | 8 | 125 | 0 | 0 | 52 | 42,978 | 53,845 | 96,562 | 509,201 | 517,124 | 0.41 |
+| M2 | on | script | claude-sonnet-5-5 | PASS | 7 | 127 | 6 | 0 | 29 | 29,920 | 12,820 | 42,438 | 248,552 | 249,960 | 0.15 |
+| M2 | on | script | claude-sonnet-5-5 | PASS | 7 | 128 | 6 | 0 | 23 | 29,921 | 19,038 | 48,562 | 274,760 | 276,402 | 0.18 |
+| M3 | off | script | claude-fable-5-2 | PASS | 8 | 125 | 0 | 0 | 76 | 44,409 | 60,490 | 104,584 | 540,343 | 548,198 | 1.6 |
+| M3 | off | script | claude-fable-5-2 | PASS | 8 | 125 | 0 | 0 | 65 | 44,411 | 60,695 | 104,737 | 540,447 | 548,507 | 1.61 |
+| M3 | on | script | claude-fable-5-2 | PASS | 6 | 129 | 5 | 0 | 35 | 31,349 | 12,202 | 43,206 | 221,595 | 223,734 | 0.54 |
+| M3 | on | script | claude-fable-5-2 | PASS | 5 | 128 | 4 | 0 | 27 | 31,347 | 20,276 | 51,253 | 208,583 | 210,979 | 0.68 |
+| M3 | off | script | claude-haiku-5-5 | PASS | 8 | 125 | 0 | 0 | 40 | 43,727 | 62,784 | 106,070 | 539,101 | 549,103 | 0.06 |
+| M3 | off | script | claude-haiku-5-5 | PASS | 8 | 125 | 0 | 0 | 36 | 43,725 | 61,712 | 105,119 | 537,834 | 546,764 | 0.06 |
+| M3 | on | script | claude-haiku-5-5 | PASS | 9 | 132 | 8 | 0 | 30 | 30,668 | 21,023 | 51,113 | 345,905 | 350,369 | 0.01 |
+| M3 | on | script | claude-haiku-5-5 | FAIL | 7 | 129 | 6 | 0 | 23 | 30,664 | 20,101 | 50,358 | 284,675 | 288,298 | 0.01 |
+| M3 | off | script | claude-opus-5-5 | PASS | 11 | 125 | 0 | 0 | 69 | 43,097 | 60,884 | 103,378 | 752,203 | 760,387 | 0.93 |
+| M3 | off | script | claude-opus-5-5 | PASS | 11 | 125 | 0 | 0 | 69 | 43,093 | 61,068 | 103,580 | 753,179 | 761,578 | 0.93 |
+| M3 | on | script | claude-opus-5-5 | PASS | 8 | 131 | 7 | 0 | 30 | 29,991 | 10,318 | 39,740 | 275,443 | 277,957 | 0.29 |
+| M3 | on | script | claude-opus-5-5 | PASS | 7 | 131 | 6 | 0 | 28 | 29,988 | 14,525 | 44,012 | 252,642 | 254,710 | 0.33 |
+| M3 | off | script | claude-sonnet-5-5 | PASS | 8 | 125 | 0 | 0 | 57 | 42,980 | 60,763 | 103,325 | 529,452 | 537,569 | 0.44 |
+| M3 | off | script | claude-sonnet-5-5 | PASS | 10 | 125 | 0 | 0 | 55 | 42,983 | 60,815 | 103,506 | 658,771 | 666,928 | 0.45 |
+| M3 | on | script | claude-sonnet-5-5 | PASS | 8 | 131 | 7 | 0 | 30 | 29,919 | 14,747 | 44,324 | 284,468 | 286,109 | 0.16 |
+| M3 | on | script | claude-sonnet-5-5 | PASS | 8 | 130 | 7 | 0 | 32 | 29,923 | 20,770 | 50,448 | 328,220 | 330,131 | 0.19 |
+
+total recorded cost, claude-fable-5-2: $19.24 across 24 run(s)
+total recorded cost, claude-haiku-5-5: $0.38 across 24 run(s)
+total recorded cost, claude-opus-5-5: $10.30 across 24 run(s)
+total recorded cost, claude-sonnet-5-5: $4.77 across 24 run(s)
+
+C0 Code Mode off  claude-fable-5-2  2026-11-17 10:07 UTC  session 89e3ab82
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 19010, 'cache_read': 71518, 'output': 201}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-fable-5-2  2026-11-17 10:21 UTC  session b484ed86
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16209, 'cache_read': 74307, 'output': 202}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-fable-5-2  2026-11-17 10:08 UTC  session 79217759
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 33394, 'cache_read': 31181, 'output': 210}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-fable-5-2  2026-11-17 10:21 UTC  session f56e3543
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16160, 'cache_read': 48421, 'output': 215}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-haiku-5-5  2026-11-17 09:47 UTC  session 0b7f95af
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 18351, 'cache_read': 70835, 'output': 233}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-haiku-5-5  2026-11-17 09:57 UTC  session e06a8002
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16255, 'cache_read': 72929, 'output': 183}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-haiku-5-5  2026-11-17 09:48 UTC  session a61aa1db
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 1}
+   tokens: {'input': 4, 'cache_write': 32931, 'cache_read': 30499, 'output': 284}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-haiku-5-5  2026-11-17 09:57 UTC  session b9d3fb2c
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 1}
+   tokens: {'input': 4, 'cache_write': 16231, 'cache_read': 47039, 'output': 178}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-opus-5-5  2026-11-17 09:02 UTC  session b8ba5e84
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 1}
+   tokens: {'input': 4, 'cache_write': 17626, 'cache_read': 70090, 'output': 193}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-opus-5-5  2026-11-17 09:14 UTC  session 5545274d
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 1}
+   tokens: {'input': 4, 'cache_write': 16189, 'cache_read': 71527, 'output': 193}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-opus-5-5  2026-11-17 09:03 UTC  session 6ce84cd4
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 32009, 'cache_read': 29827, 'output': 139}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-opus-5-5  2026-11-17 09:15 UTC  session 16d244c9
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16152, 'cache_read': 45704, 'output': 269}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-sonnet-5-5  2026-11-17 09:27 UTC  session d0cd9d35
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 17588, 'cache_read': 70096, 'output': 195}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode off  claude-sonnet-5-5  2026-11-17 09:37 UTC  session 4430fb32
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16218, 'cache_read': 71448, 'output': 195}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-sonnet-5-5  2026-11-17 09:28 UTC  session 3dc4b005
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 31937, 'cache_read': 29756, 'output': 150}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+C0 Code Mode on  claude-sonnet-5-5  2026-11-17 09:37 UTC  session f32370de
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 1}
+   tokens: {'input': 4, 'cache_write': 16127, 'cache_read': 45555, 'output': 161}
+     the answer mentions the six-month support period
+     files changed: 0 []
+
+T1 Code Mode off  claude-fable-5-2  2026-11-17 10:08 UTC  session 5c7b60d4
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4}
+   tokens: {'input': 10, 'cache_write': 22782, 'cache_read': 224426, 'output': 4836}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-fable-5-2  2026-11-17 10:22 UTC  session 9d7e3fae
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4}
+   tokens: {'input': 10, 'cache_write': 24274, 'cache_read': 228585, 'output': 5206}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-fable-5-2  2026-11-17 10:09 UTC  session 9aee4b8f
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 8, 'Poll': 3, 'Write': 1}
+   tokens: {'input': 10, 'cache_write': 47255, 'cache_read': 193192, 'output': 10035}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-fable-5-2  2026-11-17 10:23 UTC  session c163fd87
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4, 'Poll': 3, 'Write': 1}
+   tokens: {'input': 10, 'cache_write': 28816, 'cache_read': 179019, 'output': 4980}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-haiku-5-5  2026-11-17 09:48 UTC  session 2a73c030
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 6}
+   tokens: {'input': 14, 'cache_write': 20162, 'cache_read': 309623, 'output': 3384}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-haiku-5-5  2026-11-17 09:58 UTC  session 6fb5a156
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 5}
+   tokens: {'input': 12, 'cache_write': 21568, 'cache_read': 269165, 'output': 4751}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-haiku-5-5  2026-11-17 09:49 UTC  session 51a4853c
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 683, 'Bash': 17, 'Poll': 4, 'Write': 1}
+   tokens: {'input': 12, 'cache_write': 27667, 'cache_read': 208918, 'output': 6898}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-haiku-5-5  2026-11-17 09:59 UTC  session 1037d5f7
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 349, 'Read': 94, 'Poll': 7, 'Write': 1}
+   tokens: {'input': 18, 'cache_write': 58447, 'cache_read': 420080, 'output': 9371}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-opus-5-5  2026-11-17 09:03 UTC  session 4144453a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 6}
+   tokens: {'input': 14, 'cache_write': 20623, 'cache_read': 304474, 'output': 4301}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-opus-5-5  2026-11-17 09:15 UTC  session 1d5f0500
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 6}
+   tokens: {'input': 14, 'cache_write': 20360, 'cache_read': 303226, 'output': 3897}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-opus-5-5  2026-11-17 09:04 UTC  session e1bc7dc1
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 699, 'Read': 47, 'Poll': 2, 'Write': 1}
+   tokens: {'input': 10, 'cache_write': 33189, 'cache_read': 184260, 'output': 3582}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-opus-5-5  2026-11-17 09:16 UTC  session 8fa6d335
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 1034, 'Read': 134, 'Poll': 5, 'Write': 1}
+   tokens: {'input': 14, 'cache_write': 22905, 'cache_read': 224531, 'output': 4264}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:28 UTC  session 74262374
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 2}
+   tokens: {'input': 8, 'cache_write': 17777, 'cache_read': 161173, 'output': 2465}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:38 UTC  session 7321c449
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 2}
+   tokens: {'input': 6, 'cache_write': 18281, 'cache_read': 117009, 'output': 1984}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:29 UTC  session 68178e7a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 2, 'Write': 1}
+   tokens: {'input': 6, 'cache_write': 18581, 'cache_read': 78299, 'output': 1980}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+T1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:38 UTC  session b2a85a66
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 345, 'Read': 47, 'Write': 1}
+   tokens: {'input': 6, 'cache_write': 16280, 'cache_read': 76418, 'output': 1389}
+     expected 11 broken links, answered 11, correct 11
+     other files changed: 0 []
+
+E1 Code Mode off  claude-fable-5-2  2026-11-17 10:11 UTC  session 696bdb76
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4}
+   tokens: {'input': 10, 'cache_write': 24152, 'cache_read': 224934, 'output': 2313}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-fable-5-2  2026-11-17 10:24 UTC  session 579add87
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4}
+   tokens: {'input': 10, 'cache_write': 27898, 'cache_read': 228842, 'output': 2450}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-fable-5-2  2026-11-17 10:12 UTC  session 63e4d0fa
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 18, 'Write': 16, 'Bash': 5, 'Poll': 3, 'Edit': 1}
+   tokens: {'input': 10, 'cache_write': 31547, 'cache_read': 169502, 'output': 2276}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-fable-5-2  2026-11-17 10:25 UTC  session c5f0271a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 15, 'Poll': 3, 'Write': 1, 'Edit': 1}
+   tokens: {'input': 10, 'cache_write': 31643, 'cache_read': 165793, 'output': 2606}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-haiku-5-5  2026-11-17 09:50 UTC  session 94555c64
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Write': 17, 'Bash': 4}
+   tokens: {'input': 12, 'cache_write': 29332, 'cache_read': 274518, 'output': 8000}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-haiku-5-5  2026-11-17 10:00 UTC  session 8a10caab
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 4, 'Write': 1}
+   tokens: {'input': 10, 'cache_write': 26025, 'cache_read': 219828, 'output': 5727}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-haiku-5-5  2026-11-17 09:51 UTC  session 2d2d4641
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 8, 'Poll': 4, 'Write': 1, 'Edit': 1}
+   tokens: {'input': 14, 'cache_write': 30271, 'cache_read': 237812, 'output': 7133}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-haiku-5-5  2026-11-17 10:01 UTC  session c65ebb25
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Edit': 52, 'Read': 16, 'Bash': 5, 'Poll': 5, 'Write': 1}
+   tokens: {'input': 14, 'cache_write': 31488, 'cache_read': 250562, 'output': 9941}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-opus-5-5  2026-11-17 09:06 UTC  session 7e957b12
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 7}
+   tokens: {'input': 16, 'cache_write': 24326, 'cache_read': 365353, 'output': 3198}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-opus-5-5  2026-11-17 09:19 UTC  session e8900ecd
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 5}
+   tokens: {'input': 12, 'cache_write': 21498, 'cache_read': 257240, 'output': 2248}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-opus-5-5  2026-11-17 09:07 UTC  session 019aa1aa
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 18, 'Write': 16, 'Bash': 8, 'Poll': 1, 'Edit': 1}
+   tokens: {'input': 8, 'cache_write': 23723, 'cache_read': 113469, 'output': 2190}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-opus-5-5  2026-11-17 09:19 UTC  session 11de5601
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 19, 'Write': 18, 'Bash': 8, 'Poll': 2}
+   tokens: {'input': 12, 'cache_write': 30621, 'cache_read': 196572, 'output': 2833}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:29 UTC  session 59852099
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 5}
+   tokens: {'input': 12, 'cache_write': 19908, 'cache_read': 253180, 'output': 1794}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:39 UTC  session df0ffaa0
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Bash': 8}
+   tokens: {'input': 18, 'cache_write': 19604, 'cache_read': 390657, 'output': 2332}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:30 UTC  session c3c7e7fa
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 17, 'Write': 17, 'Bash': 4, 'Poll': 1}
+   tokens: {'input': 8, 'cache_write': 22044, 'cache_read': 112364, 'output': 2222}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+E1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:40 UTC  session 8fd03e59
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'Read': 17, 'Write': 17, 'Bash': 4}
+   tokens: {'input': 8, 'cache_write': 19991, 'cache_read': 111002, 'output': 1863}
+     original tests passing: 39 of 39
+     uses of the old name left in the code: 0 []
+     test files edited: 0 []
+
+M1 Code Mode off  claude-fable-5-2  2026-11-17 10:13 UTC  session bb0a70a5
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 67936, 'cache_read': 452442, 'output': 7890}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-fable-5-2  2026-11-17 10:26 UTC  session d2f3a889
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 14, 'cache_write': 67879, 'cache_read': 405814, 'output': 7835}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-fable-5-2  2026-11-17 10:15 UTC  session 77e43035
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 2, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 8, 'cache_write': 22436, 'cache_read': 125365, 'output': 970}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-fable-5-2  2026-11-17 10:28 UTC  session be0b809e
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 121, 'mcp__records__list_tickets': 3, 'Poll': 2, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 121}
+   tokens: {'input': 8, 'cache_write': 22327, 'cache_read': 124249, 'output': 1055}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 121}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-haiku-5-5  2026-11-17 09:52 UTC  session 96499c1c
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 68671, 'cache_read': 448382, 'output': 8431}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-haiku-5-5  2026-11-17 10:02 UTC  session e89bfcf1
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 68504, 'cache_read': 448192, 'output': 8310}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-haiku-5-5  2026-11-17 09:53 UTC  session 583f1935
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 2, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 10, 'cache_write': 22415, 'cache_read': 158713, 'output': 1575}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-haiku-5-5  2026-11-17 10:03 UTC  session 1af479b7
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 3, 'Write': 1, 'Read': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 22700, 'cache_read': 196882, 'output': 1306}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-opus-5-5  2026-11-17 09:08 UTC  session f07900ca
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 26, 'cache_write': 68466, 'cache_read': 700358, 'output': 8266}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-opus-5-5  2026-11-17 09:20 UTC  session c2c12a39
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 24, 'cache_write': 68086, 'cache_read': 654121, 'output': 7846}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-opus-5-5  2026-11-17 09:09 UTC  session d0b47fdd
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 3, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 10, 'cache_write': 17859, 'cache_read': 141178, 'output': 1009}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-opus-5-5  2026-11-17 09:22 UTC  session 1ecf69f0
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 17980, 'cache_read': 173423, 'output': 1192}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:31 UTC  session 609dde8e
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 67983, 'cache_read': 441200, 'output': 7828}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode off  claude-sonnet-5-5  2026-11-17 09:41 UTC  session 6a689e14
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 22, 'cache_write': 68074, 'cache_read': 565372, 'output': 8088}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:32 UTC  session 6dda58b1
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 3, 'mcp__records__list_tickets': 3, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 17722, 'cache_read': 171668, 'output': 908}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M1 Code Mode on  claude-sonnet-5-5  2026-11-17 09:42 UTC  session 3913377f
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 4, 'Poll': 3, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 17455, 'cache_read': 171087, 'output': 894}
+     expected 7 tickets totalling 1325, answered 7 totalling 1325
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-fable-5-2  2026-11-17 10:16 UTC  session 5e1eb91a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 67796, 'cache_read': 452407, 'output': 7958}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-fable-5-2  2026-11-17 10:28 UTC  session 22fd38a8
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 67786, 'cache_read': 452333, 'output': 7976}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-fable-5-2  2026-11-17 10:17 UTC  session 59fcbcc2
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 3, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 10, 'cache_write': 26621, 'cache_read': 165753, 'output': 1635}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-fable-5-2  2026-11-17 10:30 UTC  session 6aba4a3b
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 3, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 10, 'cache_write': 27575, 'cache_read': 176770, 'output': 1656}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-haiku-5-5  2026-11-17 09:53 UTC  session 0eb4a7a3
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 69516, 'cache_read': 521225, 'output': 9456}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-haiku-5-5  2026-11-17 10:04 UTC  session 9610fd03
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 69333, 'cache_read': 449065, 'output': 9326}
+     expected 9 tickets, answered 7: 7 right, 0 wrong
+     missed ['TCK-1060', 'TCK-1071']  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-haiku-5-5  2026-11-17 09:54 UTC  session 42f080e9
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 6, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 30720, 'cache_read': 308380, 'output': 4328}
+     expected 9 tickets, answered 7: 7 right, 0 wrong
+     missed ['TCK-1060', 'TCK-1071']  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-haiku-5-5  2026-11-17 10:05 UTC  session 8216f3f1
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 6, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 31492, 'cache_read': 321064, 'output': 4819}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-opus-5-5  2026-11-17 09:10 UTC  session bff18d5a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 24, 'cache_write': 68130, 'cache_read': 654449, 'output': 8308}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-opus-5-5  2026-11-17 09:22 UTC  session d04d4e49
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 24, 'cache_write': 68145, 'cache_read': 654407, 'output': 8258}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-opus-5-5  2026-11-17 09:11 UTC  session 2d3ea20b
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 4, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 27001, 'cache_read': 189610, 'output': 1727}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-opus-5-5  2026-11-17 09:24 UTC  session 0b85d8fe
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 4, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 26231, 'cache_read': 189253, 'output': 1547}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-sonnet-5-5  2026-11-17 09:33 UTC  session fc52ad40
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 67896, 'cache_read': 441228, 'output': 7803}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode off  claude-sonnet-5-5  2026-11-17 09:43 UTC  session 6e71b8b7
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 67922, 'cache_read': 441261, 'output': 7923}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-sonnet-5-5  2026-11-17 09:34 UTC  session 09f3212e
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 3, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 14, 'cache_write': 26632, 'cache_read': 221906, 'output': 1408}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M2 Code Mode on  claude-sonnet-5-5  2026-11-17 09:44 UTC  session e7726ee7
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 4, 'mcp__records__list_tickets': 3, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 14, 'cache_write': 32756, 'cache_read': 241990, 'output': 1642}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-fable-5-2  2026-11-17 10:18 UTC  session 9be84ba4
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 74510, 'cache_read': 465817, 'output': 7855}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-fable-5-2  2026-11-17 10:30 UTC  session fa8ee50b
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 74663, 'cache_read': 465768, 'output': 8060}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-fable-5-2  2026-11-17 10:20 UTC  session 65fd9b7a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 4, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 12, 'cache_write': 25966, 'cache_read': 195617, 'output': 2139}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-fable-5-2  2026-11-17 10:32 UTC  session 00268011
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'Poll': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 10, 'cache_write': 34013, 'cache_read': 174560, 'output': 2396}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-haiku-5-5  2026-11-17 09:55 UTC  session cb212445
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 76696, 'cache_read': 462389, 'output': 10002}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-haiku-5-5  2026-11-17 10:05 UTC  session 9639c083
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 75745, 'cache_read': 462073, 'output': 8930}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-haiku-5-5  2026-11-17 09:56 UTC  session 57377b0d
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 6, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 34579, 'cache_read': 311308, 'output': 4464}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-haiku-5-5  2026-11-17 10:06 UTC  session 51fff255
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 4, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 14, 'cache_write': 33824, 'cache_read': 250837, 'output': 3623}
+     expected 9 tickets, answered 5: 5 right, 0 wrong
+     missed ['TCK-1004', 'TCK-1036', 'TCK-1060', 'TCK-1071']  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-opus-5-5  2026-11-17 09:12 UTC  session f210400a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 24, 'cache_write': 74778, 'cache_read': 677401, 'output': 8184}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-opus-5-5  2026-11-17 09:25 UTC  session 0d824e30
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 24, 'cache_write': 74980, 'cache_read': 678175, 'output': 8399}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-opus-5-5  2026-11-17 09:13 UTC  session 9f71db41
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 5, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 23858, 'cache_read': 251569, 'output': 2514}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-opus-5-5  2026-11-17 09:26 UTC  session 49d07a17
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 5, 'mcp__records__list_tickets': 3, 'Write': 1, 'Read': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 14, 'cache_write': 28130, 'cache_read': 224498, 'output': 2068}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-sonnet-5-5  2026-11-17 09:35 UTC  session 4f23128a
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 18, 'cache_write': 74685, 'cache_read': 454749, 'output': 8117}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode off  claude-sonnet-5-5  2026-11-17 09:45 UTC  session d4f1202f
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'mcp__records__list_tickets': 3, 'ToolSearch': 1, 'Write': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 22, 'cache_write': 74866, 'cache_read': 583883, 'output': 8157}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-sonnet-5-5  2026-11-17 09:36 UTC  session 9225dff2
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 5, 'mcp__records__list_tickets': 4, 'Write': 1, 'Read': 1}
+   MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 28518, 'cache_read': 255934, 'output': 1641}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []
+
+M3 Code Mode on  claude-sonnet-5-5  2026-11-17 09:46 UTC  session a3cec002
+   effort medium, speed standard, permission mode auto, clean configuration, Claude Code 2.1.326
+   tools run: {'mcp__records__get_ticket': 120, 'Poll': 5, 'mcp__records__list_tickets': 3, 'Write': 1, 'Bash': 1}
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tokens: {'input': 16, 'cache_write': 34642, 'cache_read': 293562, 'output': 1911}
+     expected 9 tickets, answered 9: 9 right, 0 wrong
+     missed []  wrong extra []
+     MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+     tickets fetched through the tools: 120 of 120, from 1 server process(es)
+     other files changed: 0 []

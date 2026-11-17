@@ -1,0 +1,96 @@
+Claude Code "Code Mode" Benchmark
+Copyright © 2026 Bicameral, LLC. All rights reserved.
+
+This repository is published so that its method and results can be examined and
+checked. It is not open source, and no rights are granted except those set out
+below.
+
+1. What you may do
+
+   a. View this repository and download it.
+
+   b. Run it on computers you control, as published, for the sole purpose of
+      evaluating Claude Code's Code Mode for yourself or within your own
+      organisation. Using the settings the Benchmark Guide documents, and making
+      the small changes needed for it to run on your system, counts as running
+      it as published.
+
+   c. Publish the results you obtain, and quote short passages of the
+      documentation for comment or review, provided you credit
+      "Claude Code Code Mode Benchmark, Bicameral, LLC" and link to
+      https://github.com/Bicameral-AI/claude-code-mode-benchmark.
+
+2. What you may not do without prior written permission from Bicameral, LLC
+
+   a. Copy, redistribute, sublicense, rent or sell this repository or any
+      substantial part of it, including its tasks, prompts, data, scripts,
+      documentation and diagrams.
+
+   b. Change it or add to it: new or altered tests, prompts, data, scoring or
+      measures. To suggest a test or an extension, open an issue as described
+      at the end of this notice.
+
+   c. Use its scripts, tasks, prompts, data or documentation, in whole or in
+      part, as the basis for testing anything other than Claude Code's Code
+      Mode: for example another feature, another tool, or a comparison of
+      models with each other. If you want to do that, open an issue that says
+      what you want to test and how you would use this repository. Permission
+      may be granted in writing; opening an issue is a request, not permission.
+
+   d. Publish a modified version of it, or present it, or anything derived
+      from it, as your own benchmark or under another name.
+
+   e. Include it or any part of it in a product, a service, a dataset or
+      another benchmark, whether or not you charge for it.
+
+   f. Use its tasks, prompts or data to train a machine learning model.
+
+   g. Remove or alter this notice or any copyright notice in the repository.
+
+3. GitHub
+
+   Nothing in this notice limits the rights that GitHub's Terms of Service
+   give other GitHub users to view and fork a public repository within GitHub.
+   A fork remains subject to this notice.
+
+4. Feedback
+
+   If you send Bicameral, LLC results, corrections or suggestions, for example
+   in an issue or a pull request, you allow Bicameral, LLC to use and publish
+   them without restriction or payment.
+
+5. Material that belongs to others
+
+   The benchmark downloads Fastify when it is set up. Fastify is not part of
+   this repository and is licensed separately by its authors under the MIT
+   License. Claude and Claude Code are names of Anthropic, PBC. Other product
+   names belong to their owners. This benchmark is independent and is not
+   affiliated with or endorsed by any of them.
+
+6. No warranty
+
+   This repository is provided "as is", without warranty of any kind, express
+   or implied, including warranties of merchantability, fitness for a
+   particular purpose and non-infringement. Running it uses your own Claude
+   subscription or API credit, at your own cost and risk.
+
+7. Limit of liability
+
+   To the fullest extent the law allows, Bicameral, LLC is not liable for any
+   claim, loss or damage arising from this repository or from its use.
+
+8. Ending of permission
+
+   The permissions in section 1 end automatically if you do anything section 2
+   forbids. All other rights are reserved by Bicameral, LLC.
+
+9. Ideas and methods
+
+   This notice covers the material in this repository. It does not claim the
+   general method of running the same task with a feature off and then on,
+   and you are free to build a benchmark of your own from nothing. If ours
+   informed it, we ask that you say so.
+
+To suggest a test or an extension, or to ask for permission beyond this
+notice, open an issue at
+https://github.com/Bicameral-AI/claude-code-mode-benchmark/issues.

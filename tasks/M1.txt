@@ -1,0 +1,8 @@
+The records MCP server holds support tickets. Using only its two tools, list_tickets and get_ticket, find every ticket whose product is Atlas and whose status is open.
+
+Write the result to answer.json in this folder, in this form:
+{"count": 0, "total_refund_requested": 0, "ids": []}
+
+count is the number of matching tickets, total_refund_requested is the sum of their refund_requested values, and ids is their ticket ids in ascending order.
+
+Read the tickets only through the MCP tools; do not look for the server's own files. Change no other file. When you are done, tell me the count and the total.

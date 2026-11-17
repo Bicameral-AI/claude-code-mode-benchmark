@@ -1,0 +1,38 @@
+# Copyright © 2026 Bicameral, LLC. All rights reserved. See LICENSE.
+# Source for assets/how-code-mode-works.svg. Laid out by hand; rebuild with assets/diagrams/build.sh.
+prefix cm
+title "How Code Mode works"
+desc "Without Code Mode, Claude asks for tool calls step by step, and the whole result of each call is added to its context before the next call. With Code Mode, Claude writes one piece of JavaScript that makes many tool calls, and only what that code returns is added to its context."
+grid 300 108
+beat 1.0
+hold 2.5
+rest 1.5
+plays 2
+node offh 0 0 "Code Mode off" shape=round
+node offc 0 1 "Claude|asks for a tool call"
+node offt 0 2 "The tool runs|Bash, Read, Edit and others"
+node offx 0 3 "Claude's context|the whole result is added"
+node onh 1 0 "Code Mode on" shape=round
+node onc 1 1 "Claude|writes one piece of JavaScript"
+node onr 1 2 "The code runs|many tool calls in one go"
+node onx 1 3 "Claude's context|only what the code returns"
+edge offh offc
+edge offc offt "one call"
+edge offt offx "its result"
+edge offx offc "then the|next call" bend=-150
+edge onh onc
+edge onc onr "one script"
+edge onr onx "what it returns"
+phase "Code Mode off: one round trip for every tool call"
+step offh
+step offh>offc offc
+step offc>offt offt
+step offt>offx offx
+step offx>offc offc
+step offc>offt offt
+step offt>offx offx
+phase "Code Mode on: one script, one result"
+step onh
+step onh>onc onc
+step onc>onr onr
+step onr>onx onx

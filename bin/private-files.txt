@@ -1,0 +1,18 @@
+# The maintainer's private files: notes, plans, session records and the raw evidence.
+#
+# They are tracked in the working repository and are left out of every archive (bin/archive.py)
+# and every published copy (bin/publish.py). This is the one list both scripts read.
+#
+# One pattern per line, matched against a path from the top of the repository, ignoring case:
+#   name/     everything under that folder at the top of the repository
+#   a/b*.md   a pattern with a slash is matched against the whole path
+#   *.md      any other pattern is matched against the file name, in any folder
+
+CLAUDE.md
+CLAUDE.local.md
+LOCAL-NOTES.md
+FUTURE.md
+REFERENCE.md
+TODO.md
+*.local.md
+private/

@@ -1,0 +1,448 @@
+C0 [opus off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [opus on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [opus off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [opus on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [opus off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [opus on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [opus off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [opus on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [opus off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [opus on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [opus off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [opus on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [opus off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [opus on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [opus off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [opus on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [opus off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [opus on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [opus off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [opus on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [opus off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [opus on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [opus off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [opus on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [sonnet off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [sonnet on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [sonnet off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [sonnet on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [sonnet off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [sonnet on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [sonnet off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [sonnet on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [sonnet off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [sonnet on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [sonnet off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [sonnet on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [sonnet off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [sonnet on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [sonnet off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [sonnet on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [sonnet off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [sonnet on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [sonnet off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [sonnet on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 4, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [sonnet off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [sonnet on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [sonnet off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [sonnet on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [claude-haiku-5-5 off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [claude-haiku-5-5 on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [claude-haiku-5-5 off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [claude-haiku-5-5 on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [claude-haiku-5-5 off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [claude-haiku-5-5 on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [claude-haiku-5-5 off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [claude-haiku-5-5 on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [claude-haiku-5-5 off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [claude-haiku-5-5 on]  FAIL
+   expected 9 tickets, answered 7: 7 right, 0 wrong
+   missed ['TCK-1060', 'TCK-1071']  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [claude-haiku-5-5 off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [claude-haiku-5-5 on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [claude-haiku-5-5 off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [claude-haiku-5-5 on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [claude-haiku-5-5 off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [claude-haiku-5-5 on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [claude-haiku-5-5 off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [claude-haiku-5-5 on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [claude-haiku-5-5 off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [claude-haiku-5-5 on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [claude-haiku-5-5 off]  FAIL
+   expected 9 tickets, answered 7: 7 right, 0 wrong
+   missed ['TCK-1060', 'TCK-1071']  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [claude-haiku-5-5 on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [claude-haiku-5-5 off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [claude-haiku-5-5 on]  FAIL
+   expected 9 tickets, answered 5: 5 right, 0 wrong
+   missed ['TCK-1004', 'TCK-1036', 'TCK-1060', 'TCK-1071']  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [fable off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [fable on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [fable off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [fable on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [fable off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [fable on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [fable off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [fable on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [fable off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [fable on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [fable off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [fable on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+C0 [fable off]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+C0 [fable on]  PASS
+   the answer mentions the six-month support period
+   files changed: 0 []
+T1 [fable off]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+T1 [fable on]  PASS
+   expected 11 broken links, answered 11, correct 11
+   other files changed: 0 []
+E1 [fable off]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+E1 [fable on]  PASS
+   original tests passing: 39 of 39
+   uses of the old name left in the code: 0 []
+   test files edited: 0 []
+M1 [fable off]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M1 [fable on]  PASS
+   expected 7 tickets totalling 1325, answered 7 totalling 1325
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 121}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [fable off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M2 [fable on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [fable off]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []
+M3 [fable on]  PASS
+   expected 9 tickets, answered 9: 9 right, 0 wrong
+   missed []  wrong extra []
+   MCP calls the server received: {'list_tickets': 3, 'get_ticket': 120}
+   tickets fetched through the tools: 120 of 120, from 1 server process(es)
+   other files changed: 0 []

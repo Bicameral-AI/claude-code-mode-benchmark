@@ -1,0 +1,672 @@
+
+C0 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       0                  0   same
+   seconds                       3                  3   same
+   fixed_ctx                44,157             44,156   -0%
+   task_ctx                  2,152              2,155   +0%
+   peak_ctx                 46,203             46,202   -0%
+   total_in                 90,360             90,358   -0%
+   processed                90,554             90,555   +0%
+   cost_usd                   0.34                0.3   -12%
+
+C0 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       1                  1   same
+   seconds                       4                  4   same
+   fixed_ctx                31,191             31,188   -0%
+   task_ctx                  2,327              2,324   -0%
+   peak_ctx                 33,404             33,397   -0%
+   total_in                 64,595             64,585   -0%
+   processed                64,805             64,794   -0%
+   cost_usd                   0.56               0.29   -48%
+
+C0 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       0                  0   same
+   seconds                       3                  2   -33%
+   fixed_ctx                43,472             43,471   -0%
+   task_ctx                  2,148              2,214   +3%
+   peak_ctx                 45,542             45,541   -0%
+   total_in                 89,014             89,012   -0%
+   processed                89,180             89,244   +0%
+   cost_usd                   0.01                0.0   -100%
+
+C0 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       2                  1   -50%
+   seconds                       5                  4   -20%
+   fixed_ctx                30,506             30,504   -0%
+   task_ctx                  2,504              2,379   -5%
+   peak_ctx                 32,939             32,792   -0%
+   total_in                 63,445             63,296   -0%
+   processed                63,697             63,536   -0%
+   cost_usd                   0.01                0.0   -100%
+
+C0 Code Mode off  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       0                  0   same
+   seconds                       3                  3   same
+   fixed_ctx                42,846             42,846   same
+   task_ctx                  1,951              2,149   +10%
+   peak_ctx                 44,702             44,892   +0%
+   total_in                 87,548             87,738   +0%
+   processed                87,731             87,929   +0%
+   cost_usd                   0.16               0.16   same
+
+C0 Code Mode on  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       1                  1   same
+   seconds                       5                  4   -20%
+   fixed_ctx                29,828             29,830   +0%
+   task_ctx                  2,332              2,291   -2%
+   peak_ctx                 32,013             32,008   -0%
+   total_in                 61,841             61,838   -0%
+   processed                62,052             62,015   -0%
+   cost_usd                   0.28               0.15   -46%
+
+C0 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       0                  0   same
+   seconds                       3                  3   same
+   fixed_ctx                42,731             42,730   -0%
+   task_ctx                  2,149              2,148   -0%
+   peak_ctx                 44,777             44,776   -0%
+   total_in                 87,508             87,506   -0%
+   processed                87,699             87,696   -0%
+   cost_usd                   0.09               0.08   -11%
+
+C0 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      2                  2   same
+   tools_run                     1                  1   same
+   scripts                       1                  1   same
+   seconds                       4                  4   same
+   fixed_ctx                29,758             29,760   +0%
+   task_ctx                  2,266              2,270   +0%
+   peak_ctx                 31,938             31,939   +0%
+   total_in                 61,696             61,699   +0%
+   processed                61,846             61,854   +0%
+   cost_usd                   0.14               0.08   -43%
+
+T1 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      3                  4   +33%
+   tools_run                     2                  3   +50%
+   scripts                       0                  0   same
+   seconds                      32                 39   +22%
+   fixed_ctx                44,442             44,443   +0%
+   task_ctx                  6,312              6,741   +7%
+   peak_ctx                 50,220             50,723   +1%
+   total_in                141,393            191,115   +35%
+   processed               144,845            195,284   +35%
+   cost_usd                   0.51               0.55   +8%
+
+T1 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      4                  4   same
+   tools_run                     9                  6   -33%
+   scripts                       3                  3   same
+   seconds                      53                 46   -13%
+   fixed_ctx                31,476             31,479   +0%
+   task_ctx                 20,250             22,502   +11%
+   peak_ctx                 51,178             53,541   +5%
+   total_in                177,775            183,665   +3%
+   processed               183,131            188,474   +3%
+   cost_usd                   0.81                0.8   -1%
+
+T1 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      6                  6   same
+   tools_run                     5                  5   same
+   scripts                       0                  0   same
+   seconds                      23                 23   same
+   fixed_ctx                43,765             43,764   -0%
+   task_ctx                  6,158              7,878   +28%
+   peak_ctx                 49,840             51,088   +3%
+   total_in                284,252            290,075   +2%
+   processed               288,342            294,301   +2%
+   cost_usd                   0.01               0.01   same
+
+T1 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  6   +20%
+   tools_run                    54                935   +1631%
+   scripts                       4                  5   +25%
+   seconds                      25                 66   +164%
+   fixed_ctx                30,794             30,795   +0%
+   task_ctx                 18,406             11,005   -40%
+   peak_ctx                 48,638             41,267   -15%
+   total_in                205,995            216,837   +5%
+   processed               210,133            223,867   +7%
+   cost_usd                   0.01               0.01   same
+
+T1 Code Mode off  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                     7                  7   same
+   scripts                       0                  0   same
+   seconds                      47                 41   -13%
+   fixed_ctx                43,132             43,129   -0%
+   task_ctx                  9,443              6,065   -36%
+   peak_ctx                 51,875             48,643   -6%
+   total_in                386,968            369,756   -4%
+   processed               391,702            373,820   -5%
+   cost_usd                   0.37               0.31   -16%
+
+T1 Code Mode on  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  5   same
+   tools_run                   396              1,091   +176%
+   scripts                       4                  4   same
+   seconds                      42                 69   +64%
+   fixed_ctx                30,120             30,122   +0%
+   task_ctx                 18,388              6,573   -64%
+   peak_ctx                 48,132             36,203   -25%
+   total_in                217,184            166,459   -23%
+   processed               219,901            169,736   -23%
+   cost_usd                   0.36               0.27   -25%
+
+T1 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      3                  3   same
+   tools_run                     2                  2   same
+   scripts                       0                  0   same
+   seconds                      19                 13   -32%
+   fixed_ctx                43,016             43,013   -0%
+   task_ctx                  4,415              2,665   -40%
+   peak_ctx                 46,998             45,176   -4%
+   total_in                135,233            131,985   -2%
+   processed               137,308            133,583   -3%
+   cost_usd                   0.11                0.1   -9%
+
+T1 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      3                  3   same
+   tools_run                     3                  3   same
+   scripts                       2                  2   same
+   seconds                      17                 15   -12%
+   fixed_ctx                30,043             30,044   +0%
+   task_ctx                  4,781              4,499   -6%
+   peak_ctx                 34,350             34,159   -1%
+   total_in                 96,851             96,660   -0%
+   processed                98,803             98,326   -0%
+   cost_usd                   0.11                0.1   -9%
+
+E1 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  6   +20%
+   tools_run                     4                  5   +25%
+   scripts                       0                  0   same
+   seconds                      22                 25   +14%
+   fixed_ctx                44,228             44,225   -0%
+   task_ctx                  9,871             13,604   +38%
+   peak_ctx                 53,707             57,414   +7%
+   total_in                248,196            312,469   +26%
+   processed               250,278            314,732   +26%
+   cost_usd                   0.53               0.61   +15%
+
+E1 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  6   +20%
+   tools_run                    48                 45   -6%
+   scripts                       4                  5   +25%
+   seconds                      28                 31   +11%
+   fixed_ctx                31,260             31,265   +0%
+   task_ctx                 14,689             14,453   -2%
+   peak_ctx                 45,548             45,308   -1%
+   total_in                193,134            237,488   +23%
+   processed               195,598            239,995   +23%
+   cost_usd                   0.58               0.61   +5%
+
+E1 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                     10                  6   -40%
+   tools_run                     9                  5   -44%
+   scripts                       0                  0   same
+   seconds                      45                 33   -27%
+   fixed_ctx                43,548             43,543   -0%
+   task_ctx                 15,958             13,813   -13%
+   peak_ctx                 59,146             56,703   -4%
+   total_in                521,821            302,572   -42%
+   processed               530,107            309,605   -42%
+   cost_usd                   0.02               0.01   -50%
+
+E1 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  5   same
+   tools_run                    94                 41   -56%
+   scripts                       4                  4   same
+   seconds                      45                 39   -13%
+   fixed_ctx                30,584             30,582   -0%
+   task_ctx                 17,234             14,559   -16%
+   peak_ctx                 46,933             44,118   -6%
+   total_in                184,196            178,446   -3%
+   processed               193,827            186,812   -4%
+   cost_usd                   0.01               0.01   same
+
+E1 Code Mode off  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      7                  5   -29%
+   tools_run                     6                  4   -33%
+   scripts                       0                  0   same
+   seconds                      33                 27   -18%
+   fixed_ctx                42,947             42,918   -0%
+   task_ctx                  8,995             10,299   +14%
+   peak_ctx                 51,353             52,650   +3%
+   total_in                332,791            233,937   -30%
+   processed               335,862            236,580   -30%
+   cost_usd                   0.32               0.31   -3%
+
+E1 Code Mode on  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      4                  6   +50%
+   tools_run                    31                 47   +52%
+   scripts                       3                  5   +67%
+   seconds                      25                 35   +40%
+   fixed_ctx                29,929             29,906   -0%
+   task_ctx                  9,998             17,347   +74%
+   peak_ctx                 39,385             46,765   +19%
+   total_in                138,355            229,370   +66%
+   processed               140,567            232,099   +65%
+   cost_usd                   0.27               0.36   +33%
+
+E1 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                     10                  7   -30%
+   tools_run                     9                  6   -33%
+   scripts                       0                  0   same
+   seconds                      26                 21   -19%
+   fixed_ctx                42,803             42,800   -0%
+   task_ctx                  6,184              5,825   -6%
+   peak_ctx                 48,395             48,044   -1%
+   total_in                457,201            320,476   -30%
+   processed               459,575            322,465   -30%
+   cost_usd                   0.16               0.14   -12%
+
+E1 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  6   -25%
+   tools_run                    85                 75   -12%
+   scripts                       7                  5   -29%
+   seconds                      34                 26   -24%
+   fixed_ctx                29,831             29,829   -0%
+   task_ctx                  9,459              9,631   +2%
+   peak_ctx                 38,863             39,082   +1%
+   total_in                280,533            211,549   -25%
+   processed               283,588            213,785   -25%
+   cost_usd                   0.15               0.13   -13%
+
+M1 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      60                 61   +2%
+   fixed_ctx                44,334             44,333   -0%
+   task_ctx                 53,745             53,736   -0%
+   peak_ctx                 97,896             97,867   -0%
+   total_in                519,657            519,554   -0%
+   processed               527,522            527,410   -0%
+   cost_usd                   1.52               1.52   same
+
+M1 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      4                  4   same
+   tools_run                   127                127   same
+   scripts                       3                  3   same
+   seconds                      14                 16   +14%
+   fixed_ctx                31,364             31,367   +0%
+   task_ctx                  3,703              3,407   -8%
+   peak_ctx                 34,928             34,629   -1%
+   total_in                132,686            132,020   -1%
+   processed               133,842            133,353   -0%
+   cost_usd                   0.37               0.37   same
+
+M1 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      36                 39   +8%
+   fixed_ctx                43,647             43,650   +0%
+   task_ctx                 54,909             55,800   +2%
+   peak_ctx                 98,412             99,261   +1%
+   total_in                516,308            517,630   +0%
+   processed               525,159            527,372   +0%
+   cost_usd                   0.02               0.02   same
+
+M1 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      6                  5   -17%
+   tools_run                   128                127   -1%
+   scripts                       5                  4   -20%
+   seconds                      15                 15   same
+   fixed_ctx                30,686             30,691   +0%
+   task_ctx                  8,670              8,819   +2%
+   peak_ctx                 39,123             39,203   +0%
+   total_in                218,615            182,377   -17%
+   processed               220,016            183,901   -16%
+   cost_usd                   0.01               0.01   same
+
+M1 Code Mode off  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                     12                 12   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      69                 67   -3%
+   fixed_ctx                43,023             43,020   -0%
+   task_ctx                 53,985             53,867   -0%
+   peak_ctx                 96,788             96,671   -0%
+   total_in                767,659            766,958   -0%
+   processed               775,668            774,849   -0%
+   cost_usd                   0.85               0.87   +2%
+
+M1 Code Mode on  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  5   same
+   tools_run                   128                127   -1%
+   scripts                       4                  4   same
+   seconds                      14                 17   +21%
+   fixed_ctx                30,002             30,008   +0%
+   task_ctx                  3,553              3,782   +6%
+   peak_ctx                 33,382             33,577   +1%
+   total_in                157,943            158,429   +0%
+   processed               158,795            159,406   +0%
+   cost_usd                    0.2                0.2   same
+
+M1 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      44                 43   -2%
+   fixed_ctx                42,904             42,899   -0%
+   task_ctx                 53,892             53,872   -0%
+   peak_ctx                 96,468             96,557   +0%
+   total_in                508,459            508,502   +0%
+   processed               516,429            516,452   +0%
+   cost_usd                   0.41               0.41   same
+
+M1 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      7                  6   -14%
+   tools_run                   128                128   same
+   scripts                       6                  5   -17%
+   seconds                      15                 13   -13%
+   fixed_ctx                29,934             29,937   +0%
+   task_ctx                  4,173              3,431   -18%
+   peak_ctx                 33,954             33,190   -2%
+   total_in                222,479            188,306   -15%
+   processed               223,605            189,246   -15%
+   cost_usd                   0.11                0.1   -9%
+
+M2 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      60                 61   +2%
+   fixed_ctx                44,318             44,312   -0%
+   task_ctx                 53,732             53,796   +0%
+   peak_ctx                 97,681             97,712   +0%
+   total_in                519,284            519,275   -0%
+   processed               527,136            527,191   +0%
+   cost_usd                   1.52               1.52   same
+
+M2 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      5                  5   same
+   tools_run                   128                127   -1%
+   scripts                       4                  4   same
+   seconds                      20                 18   -10%
+   fixed_ctx                31,358             31,350   -0%
+   task_ctx                  5,143              5,307   +3%
+   peak_ctx                 36,090             36,297   +1%
+   total_in                168,974            169,037   +0%
+   processed               170,776            170,653   -0%
+   cost_usd                   0.42               0.42   same
+
+M2 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                 11   +38%
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      38                 43   +13%
+   fixed_ctx                43,639             43,644   +0%
+   task_ctx                 55,379             56,126   +1%
+   peak_ctx                 98,672             99,362   +1%
+   total_in                517,822            735,679   +42%
+   processed               527,143            745,657   +41%
+   cost_usd                   0.02               0.03   +50%
+
+M2 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               FAIL
+   requests                      9                 10   +11%
+   tools_run                   131                134   +2%
+   scripts                       8                  9   +12%
+   seconds                      32                 31   -3%
+   fixed_ctx                30,672             30,666   -0%
+   task_ctx                 18,870             18,393   -3%
+   peak_ctx                 48,945             48,432   -1%
+   total_in                355,981            378,103   +6%
+   processed               360,719            383,023   +6%
+   cost_usd                   0.01               0.01   same
+
+M2 Code Mode off  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                     11                 11   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      71                 73   +3%
+   fixed_ctx                43,013             43,014   +0%
+   task_ctx                 54,053             54,300   +0%
+   peak_ctx                 96,644             96,764   +0%
+   total_in                721,600            722,204   +0%
+   processed               729,708            730,559   +0%
+   cost_usd                   0.86               0.84   -2%
+
+M2 Code Mode on  claude-opus-5-5  (2 runs)
+                    first, by hand  latest, by script   change
+   result                     PASS               PASS
+   requests                      7                  7   same
+   tools_run                   130                131   +1%
+   scripts                       6                  6   same
+   seconds                      29                 28   -3%
+   fixed_ctx                29,995             29,993   -0%
+   task_ctx                 12,522              7,483   -40%
+   peak_ctx                 42,068             36,866   -12%
+   total_in                261,987            231,810   -12%
+   processed               263,665            233,655   -11%
+   cost_usd                    0.3               0.26   -13%
+
+M2 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                     11                 11   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      54                 55   +2%
+   fixed_ctx                42,889             42,894   +0%
+   task_ctx                 53,962             54,050   +0%
+   peak_ctx                 96,524             96,579   +0%
+   total_in                720,552            720,951   +0%
+   processed               728,574            729,061   +0%
+   cost_usd                   0.43               0.43   same
+
+M2 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      9                 10   +11%
+   tools_run                   131                133   +2%
+   scripts                       8                  9   +12%
+   seconds                      23                 29   +26%
+   fixed_ctx                29,922             29,928   +0%
+   task_ctx                  7,843             10,331   +32%
+   peak_ctx                 37,507             39,853   +6%
+   total_in                298,171            341,023   +14%
+   processed               299,879            343,301   +14%
+   cost_usd                   0.14               0.16   +14%
+
+M3 Code Mode off  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      62                 61   -2%
+   fixed_ctx                44,315             44,320   +0%
+   task_ctx                 60,557             60,480   -0%
+   peak_ctx                104,426            104,500   +0%
+   total_in                539,450            539,660   +0%
+   processed               547,403            547,536   +0%
+   cost_usd                   1.63               1.63   same
+
+M3 Code Mode on  claude-fable-5-2  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      6                  5   -17%
+   tools_run                   130                128   -2%
+   scripts                       5                  4   -20%
+   seconds                      26                 19   -27%
+   fixed_ctx                31,351             31,356   +0%
+   task_ctx                 18,098             14,154   -22%
+   peak_ctx                 49,041             45,161   -8%
+   total_in                251,361            195,553   -22%
+   processed               253,814            197,446   -22%
+   cost_usd                   0.67               0.58   -13%
+
+M3 Code Mode off  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  9   +12%
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      39                 41   +5%
+   fixed_ctx                43,634             43,641   +0%
+   task_ctx                 62,322             62,591   +0%
+   peak_ctx                105,705            105,804   +0%
+   total_in                538,503            614,157   +14%
+   processed               548,043            623,936   +14%
+   cost_usd                   0.06               0.06   same
+
+M3 Code Mode on  claude-haiku-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                     10                  8   -20%
+   tools_run                   131                130   -1%
+   scripts                       9                  7   -22%
+   seconds                      33                 25   -24%
+   fixed_ctx                30,673             30,673   same
+   task_ctx                 29,364             30,141   +3%
+   peak_ctx                 59,567             60,478   +2%
+   total_in                450,759            366,204   -19%
+   processed               455,564            369,829   -19%
+   cost_usd                   0.02               0.01   -50%
+
+M3 Code Mode off  claude-opus-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                     11                 11   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      70                 66   -6%
+   fixed_ctx                43,013             43,006   -0%
+   task_ctx                 60,861             60,859   -0%
+   peak_ctx                103,278            103,275   -0%
+   total_in                751,443            751,307   -0%
+   processed               759,635            759,497   -0%
+   cost_usd                    0.9               0.94   +4%
+
+M3 Code Mode on  claude-opus-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      7                  8   +14%
+   tools_run                   131                131   same
+   scripts                       6                  7   +17%
+   seconds                      31                 32   +3%
+   fixed_ctx                29,992             29,997   +0%
+   task_ctx                  9,747             16,744   +72%
+   peak_ctx                 39,126             46,295   +18%
+   total_in                236,509            296,164   +25%
+   processed               238,663            298,451   +25%
+   cost_usd                   0.29               0.47   +62%
+
+M3 Code Mode off  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     PASS               PASS
+   requests                      8                  8   same
+   tools_run                   125                125   same
+   scripts                       0                  0   same
+   seconds                      45                 46   +2%
+   fixed_ctx                42,888             42,898   +0%
+   task_ctx                 60,908             60,698   -0%
+   peak_ctx                103,237            103,198   -0%
+   total_in                528,674            528,681   +0%
+   processed               536,936            536,733   -0%
+   cost_usd                   0.44               0.42   -5%
+
+M3 Code Mode on  claude-sonnet-5-5  (2 runs)
+                  first, by script  latest, by script   change
+   result                     FAIL               PASS
+   requests                      6                  8   +33%
+   tools_run                   128                130   +2%
+   scripts                       5                  7   +40%
+   seconds                      20                 23   +15%
+   fixed_ctx                29,925             29,926   +0%
+   task_ctx                 14,025             15,586   +11%
+   peak_ctx                 43,602             45,222   +4%
+   total_in                220,194            284,309   +29%
+   processed               221,456            286,359   +29%
+   cost_usd                   0.15               0.17   +13%

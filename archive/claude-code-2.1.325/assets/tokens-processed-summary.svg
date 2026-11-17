@@ -1,0 +1,232 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 808" width="880" height="808" role="img" aria-labelledby="tps-title tps-desc">
+<!-- Copyright © 2026 Bicameral, LLC. All rights reserved. See LICENSE. -->
+<title id="tps-title">Tokens processed with Code Mode off and on, by kind of work and model</title>
+<desc id="tps-desc">Tokens processed with Code Mode off, then with it on, and the share saved. Totalling 120 records fetched through a tool: Opus 5.5 off 1.55 million, on 0.32 million, saved 79%; Sonnet 5.5 off 1.03 million, on 0.41 million, saved 60%; Haiku 5.5 off 1.05 million, on 0.40 million, saved 62%; Fable 5.2 off 1.05 million, on 0.27 million, saved 75%. Reading and judging 120 records fetched through a tool: Opus 5.5 off 2.98 million, on 1.03 million, saved 65%; Sonnet 5.5 off 2.53 million, on 1.15 million, saved 55%; Haiku 5.5 off 2.44 million, on 1.57 million, saved 36%; Fable 5.2 off 2.15 million, on 0.79 million, saved 63%. Caution for this group: Flattered by patterns in our test data; 2 of 16 Code Mode runs left out two records. Finding and changing things in files: Opus 5.5 off 1.34 million, on 0.76 million, saved 43%; Sonnet 5.5 off 1.05 million, on 0.69 million, saved 34%; Haiku 5.5 off 1.42 million, on 0.81 million, saved 43%; Fable 5.2 off 0.91 million, on 0.81 million, saved 11%. One question about one file (the control): Opus 5.5 off 0.18 million, on 0.12 million, saved 29%; Sonnet 5.5 off 0.18 million, on 0.12 million, saved 29%; Haiku 5.5 off 0.18 million, on 0.13 million, saved 29%; Fable 5.2 off 0.18 million, on 0.13 million, saved 28%. All six tests, no percentage given because the totals depend on this mix of tests: Opus 5.5 off 6.04 million, on 2.24 million; Sonnet 5.5 off 4.79 million, on 2.38 million; Haiku 5.5 off 5.10 million, on 2.91 million; Fable 5.2 off 4.29 million, on 2.00 million.</desc>
+<style>
+  .card   { fill: #fcfcfb; stroke: rgba(11,11,11,0.10); }
+  .gap    { fill: #fcfcfb; }
+  .on     { fill: #2a78d6; }
+  .off    { fill: #86b6ef; }
+  .grid   { stroke: #e1e0d9; stroke-width: 1; }
+  .base   { stroke: #c3c2b7; stroke-width: 1; }
+  .rule   { stroke: #e1e0d9; stroke-width: 1; }
+  text    { font-family: system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+            fill: #0b0b0b; font-variant-numeric: tabular-nums; }
+  .t-title { font-size: 17px; font-weight: 600; }
+  .t-sub   { font-size: 12.5px; fill: #52514e; }
+  .t-leg   { font-size: 12.5px; fill: #52514e; }
+  .t-head  { font-size: 11.5px; fill: #52514e; font-weight: 600; }
+  .t-tick  { font-size: 11px; fill: #898781; }
+  .t-kind  { font-size: 13px; font-weight: 600; }
+  .t-row   { font-size: 13px; }
+  .t-num   { font-size: 13px; }
+  .t-num2  { font-size: 13px; fill: #52514e; }
+  .t-saved { font-size: 13.5px; font-weight: 700; }
+  .t-note  { font-size: 12px; fill: #52514e; }
+  .t-foot  { font-size: 11.5px; fill: #52514e; }
+  @media (prefers-color-scheme: dark) {
+    .card  { fill: #1a1a19; stroke: rgba(255,255,255,0.10); }
+    .gap   { fill: #1a1a19; }
+    .on    { fill: #3987e5; }
+    .off   { fill: #184f95; }
+    .grid  { stroke: #2c2c2a; }
+    .base  { stroke: #383835; }
+    .rule  { stroke: #2c2c2a; }
+    text   { fill: #f0efec; }
+    .t-sub, .t-leg, .t-head, .t-num2, .t-note, .t-foot { fill: #c3c2b7; }
+    .t-tick { fill: #898781; }
+  }
+</style>
+<rect class="card" x="0.5" y="0.5" width="879" height="807" rx="8"/>
+<text class="t-title" x="28" y="44">Tokens processed with Code Mode off and on</text>
+<text class="t-sub" x="28" y="64">All runs of a model in one mode, added up. Claude Code v2.1.325, medium effort, 96 runs.</text>
+<rect class="off" x="28" y="88" width="22" height="12" rx="2"/>
+<text class="t-leg" x="58" y="98">Code Mode off (whole bar)</text>
+<rect class="on" x="238" y="88" width="22" height="12" rx="2"/>
+<text class="t-leg" x="268" y="98">Code Mode on (left part)</text>
+<text class="t-head" x="28" y="126">Kind of work</text>
+<text class="t-head" x="208" y="126">Model</text>
+<text class="t-tick" x="300.0" y="126" text-anchor="middle">0</text>
+<text class="t-tick" x="360.0" y="126" text-anchor="middle">0.5M</text>
+<text class="t-tick" x="420.0" y="126" text-anchor="middle">1M</text>
+<text class="t-tick" x="480.0" y="126" text-anchor="middle">1.5M</text>
+<text class="t-tick" x="540.0" y="126" text-anchor="middle">2M</text>
+<text class="t-tick" x="600.0" y="126" text-anchor="middle">2.5M</text>
+<text class="t-tick" x="660.0" y="126" text-anchor="middle">3M</text>
+<text class="t-head" x="728" y="126" text-anchor="end">Off</text>
+<text class="t-head" x="790" y="126" text-anchor="end">On</text>
+<text class="t-head" x="852" y="126" text-anchor="end">Saved</text>
+<line class="rule" x1="28" y1="136" x2="852" y2="136"/>
+<line class="base" x1="300.0" y1="146" x2="300.0" y2="250"/>
+<line class="grid" x1="360.0" y1="146" x2="360.0" y2="250"/>
+<line class="grid" x1="420.0" y1="146" x2="420.0" y2="250"/>
+<line class="grid" x1="480.0" y1="146" x2="480.0" y2="250"/>
+<line class="grid" x1="540.0" y1="146" x2="540.0" y2="250"/>
+<line class="grid" x1="600.0" y1="146" x2="600.0" y2="250"/>
+<line class="grid" x1="660.0" y1="146" x2="660.0" y2="250"/>
+<text class="t-kind" x="28" y="163">Totalling 120 records</text>
+<text class="t-kind" x="28" y="180">fetched through a tool</text>
+<path class="off" d="M300,153.0 h182.0 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-182.0 z"/>
+<rect class="gap" x="338.4" y="152.5" width="2" height="13"/>
+<rect class="on" x="300" y="153.0" width="38.4" height="12"/>
+<text class="t-row" x="208" y="163.5">Opus 5.5</text>
+<text class="t-num2" x="728" y="163.5" text-anchor="end">1.55M</text>
+<text class="t-num" x="790" y="163.5" text-anchor="end">0.32M</text>
+<text class="t-saved" x="852" y="163.5" text-anchor="end">79%</text>
+<path class="off" d="M300,179.0 h119.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-119.6 z"/>
+<rect class="gap" x="349.2" y="178.5" width="2" height="13"/>
+<rect class="on" x="300" y="179.0" width="49.2" height="12"/>
+<text class="t-row" x="208" y="189.5">Sonnet 5.5</text>
+<text class="t-num2" x="728" y="189.5" text-anchor="end">1.03M</text>
+<text class="t-num" x="790" y="189.5" text-anchor="end">0.41M</text>
+<text class="t-saved" x="852" y="189.5" text-anchor="end">60%</text>
+<path class="off" d="M300,205.0 h122.0 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-122.0 z"/>
+<rect class="gap" x="348.0" y="204.5" width="2" height="13"/>
+<rect class="on" x="300" y="205.0" width="48.0" height="12"/>
+<text class="t-row" x="208" y="215.5">Haiku 5.5</text>
+<text class="t-num2" x="728" y="215.5" text-anchor="end">1.05M</text>
+<text class="t-num" x="790" y="215.5" text-anchor="end">0.40M</text>
+<text class="t-saved" x="852" y="215.5" text-anchor="end">62%</text>
+<path class="off" d="M300,231.0 h122.0 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-122.0 z"/>
+<rect class="gap" x="332.4" y="230.5" width="2" height="13"/>
+<rect class="on" x="300" y="231.0" width="32.4" height="12"/>
+<text class="t-row" x="208" y="241.5">Fable 5.2</text>
+<text class="t-num2" x="728" y="241.5" text-anchor="end">1.05M</text>
+<text class="t-num" x="790" y="241.5" text-anchor="end">0.27M</text>
+<text class="t-saved" x="852" y="241.5" text-anchor="end">75%</text>
+<line class="rule" x1="28" y1="259.0" x2="852" y2="259.0"/>
+<line class="base" x1="300.0" y1="268.0" x2="300.0" y2="372.0"/>
+<line class="grid" x1="360.0" y1="268.0" x2="360.0" y2="372.0"/>
+<line class="grid" x1="420.0" y1="268.0" x2="420.0" y2="372.0"/>
+<line class="grid" x1="480.0" y1="268.0" x2="480.0" y2="372.0"/>
+<line class="grid" x1="540.0" y1="268.0" x2="540.0" y2="372.0"/>
+<line class="grid" x1="600.0" y1="268.0" x2="600.0" y2="372.0"/>
+<line class="grid" x1="660.0" y1="268.0" x2="660.0" y2="372.0"/>
+<text class="t-kind" x="28" y="285.0">Reading and judging</text>
+<text class="t-kind" x="28" y="302.0">120 records fetched</text>
+<text class="t-kind" x="28" y="319.0">through a tool</text>
+<path class="off" d="M300,275.0 h353.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-353.6 z"/>
+<rect class="gap" x="423.6" y="274.5" width="2" height="13"/>
+<rect class="on" x="300" y="275.0" width="123.6" height="12"/>
+<text class="t-row" x="208" y="285.5">Opus 5.5</text>
+<text class="t-num2" x="728" y="285.5" text-anchor="end">2.98M</text>
+<text class="t-num" x="790" y="285.5" text-anchor="end">1.03M</text>
+<text class="t-saved" x="852" y="285.5" text-anchor="end">65%</text>
+<path class="off" d="M300,301.0 h299.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-299.6 z"/>
+<rect class="gap" x="438.0" y="300.5" width="2" height="13"/>
+<rect class="on" x="300" y="301.0" width="138.0" height="12"/>
+<text class="t-row" x="208" y="311.5">Sonnet 5.5</text>
+<text class="t-num2" x="728" y="311.5" text-anchor="end">2.53M</text>
+<text class="t-num" x="790" y="311.5" text-anchor="end">1.15M</text>
+<text class="t-saved" x="852" y="311.5" text-anchor="end">55%</text>
+<path class="off" d="M300,327.0 h288.8 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-288.8 z"/>
+<rect class="gap" x="488.4" y="326.5" width="2" height="13"/>
+<rect class="on" x="300" y="327.0" width="188.4" height="12"/>
+<text class="t-row" x="208" y="337.5">Haiku 5.5</text>
+<text class="t-num2" x="728" y="337.5" text-anchor="end">2.44M</text>
+<text class="t-num" x="790" y="337.5" text-anchor="end">1.57M</text>
+<text class="t-saved" x="852" y="337.5" text-anchor="end">36%</text>
+<path class="off" d="M300,353.0 h254.0 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-254.0 z"/>
+<rect class="gap" x="394.8" y="352.5" width="2" height="13"/>
+<rect class="on" x="300" y="353.0" width="94.8" height="12"/>
+<text class="t-row" x="208" y="363.5">Fable 5.2</text>
+<text class="t-num2" x="728" y="363.5" text-anchor="end">2.15M</text>
+<text class="t-num" x="790" y="363.5" text-anchor="end">0.79M</text>
+<text class="t-saved" x="852" y="363.5" text-anchor="end">63%</text>
+<text class="t-note" x="208" y="388.0">Flattered by patterns in our test data; 2 of 16 Code Mode runs left out two records.</text>
+<line class="rule" x1="28" y1="400.0" x2="852" y2="400.0"/>
+<line class="base" x1="300.0" y1="409.0" x2="300.0" y2="513.0"/>
+<line class="grid" x1="360.0" y1="409.0" x2="360.0" y2="513.0"/>
+<line class="grid" x1="420.0" y1="409.0" x2="420.0" y2="513.0"/>
+<line class="grid" x1="480.0" y1="409.0" x2="480.0" y2="513.0"/>
+<line class="grid" x1="540.0" y1="409.0" x2="540.0" y2="513.0"/>
+<line class="grid" x1="600.0" y1="409.0" x2="600.0" y2="513.0"/>
+<line class="grid" x1="660.0" y1="409.0" x2="660.0" y2="513.0"/>
+<text class="t-kind" x="28" y="426.0">Finding and changing</text>
+<text class="t-kind" x="28" y="443.0">things in files</text>
+<path class="off" d="M300,416.0 h156.8 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-156.8 z"/>
+<rect class="gap" x="391.2" y="415.5" width="2" height="13"/>
+<rect class="on" x="300" y="416.0" width="91.2" height="12"/>
+<text class="t-row" x="208" y="426.5">Opus 5.5</text>
+<text class="t-num2" x="728" y="426.5" text-anchor="end">1.34M</text>
+<text class="t-num" x="790" y="426.5" text-anchor="end">0.76M</text>
+<text class="t-saved" x="852" y="426.5" text-anchor="end">43%</text>
+<path class="off" d="M300,442.0 h122.0 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-122.0 z"/>
+<rect class="gap" x="382.8" y="441.5" width="2" height="13"/>
+<rect class="on" x="300" y="442.0" width="82.8" height="12"/>
+<text class="t-row" x="208" y="452.5">Sonnet 5.5</text>
+<text class="t-num2" x="728" y="452.5" text-anchor="end">1.05M</text>
+<text class="t-num" x="790" y="452.5" text-anchor="end">0.69M</text>
+<text class="t-saved" x="852" y="452.5" text-anchor="end">34%</text>
+<path class="off" d="M300,468.0 h166.4 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-166.4 z"/>
+<rect class="gap" x="397.2" y="467.5" width="2" height="13"/>
+<rect class="on" x="300" y="468.0" width="97.2" height="12"/>
+<text class="t-row" x="208" y="478.5">Haiku 5.5</text>
+<text class="t-num2" x="728" y="478.5" text-anchor="end">1.42M</text>
+<text class="t-num" x="790" y="478.5" text-anchor="end">0.81M</text>
+<text class="t-saved" x="852" y="478.5" text-anchor="end">43%</text>
+<path class="off" d="M300,494.0 h105.2 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-105.2 z"/>
+<rect class="gap" x="397.2" y="493.5" width="2" height="13"/>
+<rect class="on" x="300" y="494.0" width="97.2" height="12"/>
+<text class="t-row" x="208" y="504.5">Fable 5.2</text>
+<text class="t-num2" x="728" y="504.5" text-anchor="end">0.91M</text>
+<text class="t-num" x="790" y="504.5" text-anchor="end">0.81M</text>
+<text class="t-saved" x="852" y="504.5" text-anchor="end">11%</text>
+<line class="rule" x1="28" y1="522.0" x2="852" y2="522.0"/>
+<line class="base" x1="300.0" y1="531.0" x2="300.0" y2="635.0"/>
+<line class="grid" x1="360.0" y1="531.0" x2="360.0" y2="635.0"/>
+<line class="grid" x1="420.0" y1="531.0" x2="420.0" y2="635.0"/>
+<line class="grid" x1="480.0" y1="531.0" x2="480.0" y2="635.0"/>
+<line class="grid" x1="540.0" y1="531.0" x2="540.0" y2="635.0"/>
+<line class="grid" x1="600.0" y1="531.0" x2="600.0" y2="635.0"/>
+<line class="grid" x1="660.0" y1="531.0" x2="660.0" y2="635.0"/>
+<text class="t-kind" x="28" y="548.0">One question about</text>
+<text class="t-kind" x="28" y="565.0">one file (the control)</text>
+<path class="off" d="M300,538.0 h17.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-17.6 z"/>
+<rect class="gap" x="314.4" y="537.5" width="2" height="13"/>
+<rect class="on" x="300" y="538.0" width="14.4" height="12"/>
+<text class="t-row" x="208" y="548.5">Opus 5.5</text>
+<text class="t-num2" x="728" y="548.5" text-anchor="end">0.18M</text>
+<text class="t-num" x="790" y="548.5" text-anchor="end">0.12M</text>
+<text class="t-saved" x="852" y="548.5" text-anchor="end">29%</text>
+<path class="off" d="M300,564.0 h17.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-17.6 z"/>
+<rect class="gap" x="314.4" y="563.5" width="2" height="13"/>
+<rect class="on" x="300" y="564.0" width="14.4" height="12"/>
+<text class="t-row" x="208" y="574.5">Sonnet 5.5</text>
+<text class="t-num2" x="728" y="574.5" text-anchor="end">0.18M</text>
+<text class="t-num" x="790" y="574.5" text-anchor="end">0.12M</text>
+<text class="t-saved" x="852" y="574.5" text-anchor="end">29%</text>
+<path class="off" d="M300,590.0 h17.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-17.6 z"/>
+<rect class="gap" x="315.6" y="589.5" width="2" height="13"/>
+<rect class="on" x="300" y="590.0" width="15.6" height="12"/>
+<text class="t-row" x="208" y="600.5">Haiku 5.5</text>
+<text class="t-num2" x="728" y="600.5" text-anchor="end">0.18M</text>
+<text class="t-num" x="790" y="600.5" text-anchor="end">0.13M</text>
+<text class="t-saved" x="852" y="600.5" text-anchor="end">29%</text>
+<path class="off" d="M300,616.0 h17.6 a4,4 0 0 1 4,4 v4 a4,4 0 0 1 -4,4 h-17.6 z"/>
+<rect class="gap" x="315.6" y="615.5" width="2" height="13"/>
+<rect class="on" x="300" y="616.0" width="15.6" height="12"/>
+<text class="t-row" x="208" y="626.5">Fable 5.2</text>
+<text class="t-num2" x="728" y="626.5" text-anchor="end">0.18M</text>
+<text class="t-num" x="790" y="626.5" text-anchor="end">0.13M</text>
+<text class="t-saved" x="852" y="626.5" text-anchor="end">28%</text>
+<line class="rule" x1="28" y1="644.0" x2="852" y2="644.0"/>
+<text class="t-kind" x="28" y="670.0">All six tests</text>
+<text class="t-row" x="208" y="670.5">Opus 5.5</text>
+<text class="t-num2" x="728" y="670.5" text-anchor="end">6.04M</text>
+<text class="t-num" x="790" y="670.5" text-anchor="end">2.24M</text>
+<text class="t-row" x="208" y="696.5">Sonnet 5.5</text>
+<text class="t-num2" x="728" y="696.5" text-anchor="end">4.79M</text>
+<text class="t-num" x="790" y="696.5" text-anchor="end">2.38M</text>
+<text class="t-row" x="208" y="722.5">Haiku 5.5</text>
+<text class="t-num2" x="728" y="722.5" text-anchor="end">5.10M</text>
+<text class="t-num" x="790" y="722.5" text-anchor="end">2.91M</text>
+<text class="t-row" x="208" y="748.5">Fable 5.2</text>
+<text class="t-num2" x="728" y="748.5" text-anchor="end">4.29M</text>
+<text class="t-num" x="790" y="748.5" text-anchor="end">2.00M</text>
+<text class="t-note" x="300" y="693.0">No percentage for the totals: they depend</text>
+<text class="t-note" x="300" y="709.0">on this mix of tests, where three of the six</text>
+<text class="t-note" x="300" y="725.0">make 120 tool calls each.</text>
+<line class="rule" x1="28" y1="766.0" x2="852" y2="766.0"/>
+<text class="t-foot" x="28" y="786.0">Tokens processed is not cost: most of these tokens are read from the prompt cache, which is billed at a lower rate.</text>
+</svg>

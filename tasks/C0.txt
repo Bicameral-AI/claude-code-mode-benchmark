@@ -1,0 +1,1 @@
+Read docs/Reference/LTS.md and tell me in two sentences how long a Fastify major version is supported. Change no files.

@@ -1,0 +1,47 @@
+# The maintainer's working documents are tracked in the working repository. They are kept out
+# of every archive and every published copy by the list in bin/private-files.txt, not by this file.
+
+# Secrets and local environment files.
+.env
+.env.*
+
+# Claude Code files that belong to one person or one session.
+.claude/settings.local.json
+.claude/*.local.*
+.playwright-mcp/
+
+# A new run that has not been validated and promoted yet (see ARCHIVING.md), trial archives, and a trial of the published copy.
+/new_run/
+/archive-trial/
+/public-export/
+
+# Anything the benchmark builds belongs outside this repository (see bin/benchlib.py).
+# These catch the folders an older layout used, or a BENCH_HOME set inside the repository.
+/pristine/
+/repo/
+/work/
+/.bench-home/
+/.bench-mcp.json
+results/.round-start
+results/mcp-calls.log
+
+# Python caches and virtual environments.
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Editors and operating systems.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
+
+# Logs and scratch files.
+*.log
+*.tmp

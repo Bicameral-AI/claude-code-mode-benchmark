@@ -1,0 +1,3 @@
+Rename invoice.money.format_amount to format_money, and make currency keyword-only, so that its signature is format_money(value, *, currency, places=2).
+
+Update every caller so that python3 -m unittest passes. Leave tests/ unchanged, and leave no function, alias or wrapper under the old name. When you are done, tell me how many call sites you changed.

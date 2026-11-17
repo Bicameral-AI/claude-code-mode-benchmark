@@ -1,0 +1,30 @@
+# Copyright © 2026 Bicameral, LLC. All rights reserved. See LICENSE.
+# Source for assets/how-a-benchmark-is-archived.svg. Laid out by hand; rebuild with assets/diagrams/build.sh.
+prefix ar
+title "How a new benchmark replaces the current one"
+desc "A new run is saved apart from the published results and validated. The current benchmark is then copied whole into the archive, and that copy is validated against what was published. Only then does the new run become the current benchmark, and the change is committed and tagged."
+grid 300 104
+beat 1.0
+hold 2.5
+rest 1.5
+plays 2
+node run 0.5 0 "New run on a newer Claude Code|saved in new_run, nothing published changes"
+node vnew 0.5 1.1 "Validate the new run|complete, one version, checks read"
+node arch 0.5 2.2 "Archive the current benchmark|a full copy: documents, results, charts"
+node varch 0.5 3.3 "Validate the archive|matches what was published, links work"
+node promo 0.5 4.4 "Promote the new run|it becomes the current benchmark"
+node tag 0.5 5.5 "Commit and tag|each step can be undone alone" shape=round
+edge run vnew
+edge vnew arch "only if it passes"
+edge arch varch
+edge varch promo "only if it passes"
+edge promo tag
+phase "The new run is checked while it is still apart"
+step run
+step run>vnew vnew
+phase "The current benchmark is kept before anything is replaced"
+step vnew>arch arch
+step arch>varch varch
+phase "Only then does the new run take its place"
+step varch>promo promo
+step promo>tag tag

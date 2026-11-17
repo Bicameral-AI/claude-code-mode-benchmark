@@ -1,0 +1,8 @@
+The records MCP server holds support tickets. Using only its two tools, list_tickets and get_ticket, find every ticket in which the customer reports having actually been charged more than once for the same purchase. Questions or worries about a possible charge do not count.
+
+Write the result to answer.json in this folder, in this form:
+{"count": 0, "ids": []}
+
+count is the number of matching tickets and ids is their ticket ids in ascending order.
+
+Read the tickets only through the MCP tools; do not look for the server's own files. Change no other file. When you are done, tell me the count.

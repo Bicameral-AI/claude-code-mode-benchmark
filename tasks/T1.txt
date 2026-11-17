@@ -1,0 +1,11 @@
+Find every broken local link in the Markdown files of this repository and write the result to answer.tsv in this folder.
+
+Rules:
+- Check every .md file in this folder and its subfolders.
+- Count only inline Markdown links and images: [label](path) and ![alt](path). Ignore HTML tags and reference-style definitions.
+- Skip any link whose path starts with a scheme (http:, https:, mailto: and so on) or with #.
+- Drop any #fragment, decode %20-style escapes, and resolve the path from the linking file's folder. The link is fine if that file or folder exists. Do not check the fragment.
+- Ignore anything inside fenced code blocks and inside inline code.
+- answer.tsv has one line per broken link: the linking file's path from this folder, a tab, then the link's path as written without its fragment. Sorted, no header, no duplicates.
+
+Change no other file. When you are done, tell me the number of broken links.
